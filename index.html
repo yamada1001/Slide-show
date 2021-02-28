@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>スライドショー</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="slick.css">
+  <link rel="stylesheet" type="text/css" href="slick-theme.css">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+    .slick-slide {
+      margin: 0px 20px;
+    }
+    .slick-slide img {
+      width: 50%;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+    .slick-current {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <section class="regular slider">
+    <div align="center"><img src="https://media.istockphoto.com/photos/portrait-of-young-woman-with-curly-hair-in-the-city-picture-id1218228957?b=1&k=6&m=1218228957&s=170667a&w=0&h=LOAOew_Tds3MAfYx31nxBilIiAtIVs4CRE8EiKEHLwg="></div>
+    <div align="center"><img src="https://media.istockphoto.com/photos/successful-casual-business-woman-smiling-picture-id1244524447?b=1&k=6&m=1244524447&s=170667a&w=0&h=Vd7UVwe059IpNxJ1IIW-6AhVN-Ymb4-aVAaVXzp4JPY="></div>
+    <div align="center"><img src="https://media.istockphoto.com/photos/hispanic-woman-at-home-working-on-a-computer-picture-id1214389964?b=1&k=6&m=1214389964&s=170667a&w=0&h=QzprawjygxTTbdm1uL2Oo9Txl_zXyIp6_UfejKUekCg="></div>
+    <div align="center"><img src="https://media.istockphoto.com/photos/photo-of-attractive-pretty-business-lady-short-hairstyle-friendly-picture-id1210306927?b=1&k=6&m=1210306927&s=170667a&w=0&h=Uue9L87_C9y-TU-3KemJnyVGSassVHs6huV3msprsyM="></div>
+    <div align="center"><img src="https://media.istockphoto.com/photos/happy-lady-sitting-with-laptop-at-studio-picture-id1255197872?b=1&k=6&m=1255197872&s=170667a&w=0&h=axTo_m9lVe1i3tUCUJfL4yClezu11JbvT6pFI2jsh7c="></div>
+  </section>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        slidesToScroll: 1
+      });
+    });
+</script>
+</body>
